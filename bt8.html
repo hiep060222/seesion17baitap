@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(length, width) {
+                this.length = length;
+                this.width = width;
+            }
+            calculateArea() {
+                return this.length * this.width;
+            }
+            calculatePerimeter() {
+                return 2 * (this.length + this.width);
+            }
+        }
+        const rectangle = new Rectangle(10, 5);
+        rectangle.length = 15;
+        rectangle.width = 8;
+        console.log("Diện tích: " + rectangle.calculateArea());
+        console.log("Chu vi: " + rectangle.calculatePerimeter());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bước 1: Xây dựng lớp MyDate với phương thức khởi tạo có 3 tham số truyền vào
+        let MyDate = function (day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            // Bước 2: Xây dựng phương thức trả về ngày, tháng, năm
+            this.getDay = () => {
+                return this.day
+            }
+            this.getMonth = () => {
+                return this.month
+            }
+            this.getYear = () => {
+                return this.year
+            }
+            // Bước 3: Xây dựng phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+            // setday de sua lai ngay thang nam.
+            this.setDay = (day) => {
+                this.day = day;
+            }
+            this.setMonth = (month) => {
+                this.month = month;
+            }
+            this.setYear = (year) => {
+                this.year = year;
+            }
+            //  Cài đặt thêm phương thức setDate() để thiết đặt lại ngày, tháng
+            this.setDate = (day, month, year) => {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            this.toString = () => {
+                return this.day + "/" + this.month + "/" + this.year;
+            }
+
+        };
+        let date = new MyDate(2, 2, 2007);
+        console.log(date);
+        console.log(date.toString());
+
+        date.setDate(8, 5, 2000);
+        console.log(date.toString());
+        C
+
+    </script>
+</body>
+
+</html>
